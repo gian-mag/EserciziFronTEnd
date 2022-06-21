@@ -1,0 +1,128 @@
+/* IMPOSTAZIONI GENERALI */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+a {
+    color: #f00;
+}
+b {
+    font-weight: bold;
+}
+strong {
+    color: #00A0C6;
+}
+hr {
+    border: dashed;
+    border-width: 1px;
+    margin: 30px auto;
+}
+h3 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 20px 0px;
+}
+mark {
+    background-color: #027794;
+    color: white;
+}
+kbd {
+    color: yellow;
+    font-style: italic;
+    font-weight: bold;
+}
+/* HEADER */
+header {
+    background-color: #00A0C6;
+    padding: 5%;
+    border-bottom: 6px #027794 solid;
+}
+h1, h2 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.1rem;
+    margin: 10px;
+}
+header h1 {
+    color: white;
+    font-size: 30px ;
+}
+header h2 {
+    padding-top: 1.5em;
+}
+span {
+    background-color: white;
+    color: #00A0C6;
+}
+/* MAIN */
+main {
+    text-align: justify;
+    padding: 10%;
+    font-size: 1.1em;
+}
+/* ELEMENTI NEL MAIN */
+main h2 {
+    color: #027794;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+figure {
+    text-align: center;
+}
+figure img{
+    border: solid #e3e3e3 1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+main address {
+    margin: 20px 0px 20px 0px;
+}
+main blockquote {
+    display:block;
+    text-align: center;
+    border-radius: 10px;
+    font-style: italic;
+    margin: 20px 10px 20px 10px;
+    background-color: #e3e3e3;
+    padding: 20px 10px 40px 10px;
+}
+div h2 {
+    margin: 20px 10px;
+}
+section ul {
+    margin-left: 40px;
+    margin-top: 20px;
+}
+section dd {
+    margin-left: 20px;
+}
+/* FOOTER */
+footer {
+    background-color: #353535;
+    text-align: center;
+    padding-top: 0px 10px;
+    border-top: 6px #00A0C6 solid; 
+}
+footer hr{
+    border: none;
+}
+footer p {
+    color: white;
+    margin: 1px;
+}
+footer p small {
+    color: #999;
+    padding-bottom: 20px; /* NON RIESCO A CAMBIARE LA POSIZIONE DI SMALL */
+}
+/* FAMILY FONT
+    font-family: 'Raleway', sans-serif
+    azzurro #00A0C6
+    azzurro + scuro #027794
+    font dei titoli -> Raleway
+    Font generico -> Arial 
+    Bordo tratteggiato -> dashed
+*/

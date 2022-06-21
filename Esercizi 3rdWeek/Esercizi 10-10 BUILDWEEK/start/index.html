@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La mia prima calcolatrice JS</title>
+    <link rel="stylesheet" href="assets/css/stile.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    
+        <div class="contenitore"><h1>Il mio primo calcolatore in JS</h1></div>
+
+        <div class="calcolatore">
+            <input type="text" name="Schermino" id="opera" readonly>
+        </div>
+
+        <div class="calcolatore">
+
+            <div class="calcolatore">
+                <input class="bottone" id="primo" value="7" type="submit" onclick="clicca(value)">
+                <input class="bottone" id="secondo" value="8" type="submit" onclick="clicca(value)">
+                <input class="bottone" id="terzo" value="9" type="submit" onclick="clicca(this.value)">
+                <input class="bottone" id="quarto" value="/" type="submit" onclick="clicca(this.value)">
+            </div>
+
+            <div class="calcolatore">
+                <input class="bottone" id="quinto" value="4" type="submit" onclick="clicca(this.value)">
+                <input class="bottone" id="sesto" value="5" type="submit" onclick="clicca(this.value)">
+                <input class="bottone" id="settimo" value="6" type="submit" onclick="clicca(this.value)">
+                <input class="bottonePer" id="*" value="X" type="submit" onclick="clicca(this.id)">
+            </div>
+
+            <div class="calcolatore">
+                <input class="bottone" id="nono" value="1" type="submit" onclick="clicca(this.value)">
+                <input class="bottone" id="decimo" value="2" type="submit" onclick="clicca(this.value)">
+                <input class="bottone" id="undicesimo" value="3" type="submit" onclick="clicca(this.value)">
+                <input class="bottone" id="dodicesimo" value="-" type="submit" onclick="clicca(this.value)">
+            </div>
+
+            <div class="calcolatore">
+                <input class="bottone" id="tredicesimo" value="C" type="submit" onclick="cancella()">
+                <input class="bottone" id="quattordicesimo" value="0" type="submit" onclick="clicca(this.value)">
+                <input class="bottone" id="quindicesimo" value="." type="submit" onclick="clicca(this.value)">
+                <input class="bottone" id="sedicesimo" value="+" type="submit" onclick="clicca(this.value)">
+            </div>
+
+        </div>
+
+        <div class="calcolatore">
+            <button class="pulsante" type="button" onclick="operazione()">=</button>
+        </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

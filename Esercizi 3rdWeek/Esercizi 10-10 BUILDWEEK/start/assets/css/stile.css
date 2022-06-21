@@ -1,0 +1,58 @@
+* {box-sizing: border-box;}
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    align-items: center;
+    font-family: 'Jura', sans-serif;
+}
+
+/* Display */
+#opera, .pulsante {
+    background-color: #c0c1c0;
+    font-size: 1.5em;
+    border: none;
+    width: 100%;
+}
+#opera {
+    padding: .7em .2em;
+    text-align: center;
+    font-size: 2rem;
+}
+.calcolatore {
+    background-color: #c0c1c0;
+    width: calc(100vw - 40vw);
+}
+
+/* Bottoni e pulsanti */
+.bottone, .bottonePer {
+    background: #f3f3f2;
+    margin: .2em;
+    font-size: 1.2em;
+    border: none;
+    width: 12vw;
+    height: 7vh;
+    box-shadow: 1px 1px 2px black;
+}
+#quarto, #dodicesimo, #sedicesimo, .bottonePer {
+    background: #d9d9d9;
+}
+.bottone:hover, .bottonePer:hover {
+    background-color: gray;
+}
+#quarto:hover, #dodicesimo:hover, #sedicesimo:hover {
+    background-color: gray;
+}
+.pulsante {
+    background-color: #8cb2d8;
+    height: 4vh;
+    border: 1px solid black;
+}
+.pulsante:hover {
+    background-color: #2d72b6;
+}
+@media screen and (min-width:768px) {
+    #opera {
+        font-size: 4rem;
+    }    
+}

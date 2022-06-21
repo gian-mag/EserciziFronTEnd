@@ -1,0 +1,127 @@
+/*IMPOSTAZIONI GENERALI*/
+html { font-size: 62.5%;}
+*{
+    box-sizing: border-box;
+}
+/*BODY*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+    color: #393d41;
+    font-size: 1.2rem;
+    text-align: center;
+}
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    color:  #25a2c3;
+    padding-top: 2rem;
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 1.7rem;
+}
+/*HEADER*/
+header {
+    background-color: black;
+    padding: 2.8rem;
+}
+header img {
+    width: 40%;
+}
+/*MAIN*/
+main p{
+    padding: 0rem 10rem 0rem 10rem;
+}
+main div.folle {
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    width: 100%;
+    padding-bottom: 5rem;
+}
+main div.folle p {
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+}
+main div a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #f04c2f;
+    color: white;
+    border-radius: 0.3rem;
+    padding: 1rem 2rem;
+}
+/*MAIN-ARTICLE*/
+main article {
+    padding-top: 2rem;
+}
+main article img {
+    border-radius: 100%;
+    width: 50%;
+    margin-top: 2rem;
+}
+/*MAIN-SECTION*/
+main section {
+    background-color: #e22d0e;
+    color: white;
+    padding: 1rem;
+    margin-top: 5rem;
+}
+main section h1 {
+    color: white;
+    padding-bottom: 2rem;
+}
+main section blockquote {
+    padding: 0rem 5rem 0rem 5rem;
+}
+main section em {
+    font-style: italic;
+    font-size: 1.5rem;
+}
+main section p {
+    padding: 2rem 10rem 3rem 10rem;
+}
+main section p span {
+    font-size: 0.9rem;
+}
+/*ASIDE*/
+aside div{
+    border: 1px solid #dee1e3;
+    margin: 3rem 2rem 0rem 2rem;
+}
+aside div img {
+    width: 100%;
+}
+aside div p {
+    padding-bottom: 2rem;
+}
+/*FOOTER*/
+footer {
+    background-color: #25a2c3;
+    color: white;
+    margin-top: 5rem; 
+}
+footer p {
+    color: #c8e7f0;
+    padding-bottom: 5rem;
+}
+footer i {
+    color: white;
+}
+footer h1{
+    color: white;
+}
+footer hr {
+    background-color: #c8e7f0;
+    width: 30%;
+    border: none;
+    height: 1px;
+}
+footer a {
+    color: #c8e7f0;
+}

@@ -1,0 +1,20 @@
+/*IMPOSTAZIONI GENERALI*/
+html { font-size: 62.5%;}
+*{
+    box-sizing: border-box;
+}
+/*BODY*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+    color: #393d41;
+    font-size: 1.2rem;
+    text-align: center;
+}
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    color:  #25a2c3;
+    padding-top: 2rem;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavoriamo con Javascript</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/stile.css">
+</head>
+<body>
+    <h2>Iniziamo a fare pratica</h2>
+    <p>Linkiamo per la prima volta un file javascript tramite: <pre><kbd>&lt;script src="assets/js/index.js"&gt;&lt;/script&gt;</kbd></pre></p>
+    <p>Invece, se clicchi il pulsante di seguito, si apriranno gli alert!</p>
+    <button type="button" onclick="smettila()">Clicca qui</button>
+    <br>
+    <br>
+    <form method="post" action="#">
+            <fieldset>
+                <legend>Scegli il tuo animale:</legend>
+                <p>Scegli il tuo genere, e ti verrà assegnato un animale:</p>
+                    <input type="radio" id="ALFA" name="genere" value="M">
+                    <label for="ALFA" onclick="petA()"><p id="A">Maschio</p></label>
+                    <input type="radio" id="BETA" name="genere" value="F">
+                    <label for="BETA" onclick="petB()"><p id="B">Femmina</p></label>
+            </fieldset>
+    </form>
+    <br>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/naming.js"></script>
+</body>
+</html>

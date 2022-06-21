@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESERCIZIO FORM</title>
+    <style>
+        .FORM {
+            background-color: beige;
+            border-radius: 3px;
+            padding: 1em;
+        }
+        .column {
+            padding: 1em;
+        }
+        .input {
+            display: flex;
+        }
+        .input > label {
+            margin-right: 1em;
+            padding: 0.5em 0;
+        }
+        .FORM input, .FORM select {
+            flex: 1;
+            padding: .5em;
+            margin-bottom: 1em;
+        }
+        .FORM button {
+            padding: 1em;
+            background: gray;
+            color: white;
+            border: 0;
+        }
+        .FORM fieldset {
+            border: none;
+        }
+        .taxi > label, .extras > label {
+            display: block;
+        }
+        @media screen and (min-width: 768px) {
+            .row {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form class="FORM">
+        <div class="row">
+            <div class="column">
+                <div class="input">
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="input">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone">
+                </div>
+                <div class="input">
+                    <label for="address">Email</label>
+                    <input type="email" id="address">
+                </div>
+                <div class="input">
+                    <label for="time">Date/Time</label>
+                    <input type="datetime-local" id="time">
+                </div>
+                <div class="input">
+                    <label for="place">Place</label>
+                    <select id="placee">
+                        <option value=""></option>
+                        <option value="Office">Office</option>
+                        <option value="Town">Town</option>
+                        <option value="Ariport">Airport</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <label for="dropoff">Dropoff</label>
+                    <input type="text" id="dropoff" list="destinations">
+                    <datalist id="destinations">
+                        <option value="Beach"></option>
+                        <option value="Bar"></option>
+                        <option value="Restaurant"></option>
+                    </datalist>
+                </div>
+            </div>
+            <div class="column">
+                <fieldset class="taxi">
+                    <legend>Which taxi do you require?</legend>
+                    <label><input type="radio" id="taxi" name="taxi" value="van">Car</label>
+                    <label><input type="radio" id="taxi" name="taxi" value="van">Van</label>
+                    <label><input type="radio" id="taxi" name="taxi" value="tuktuk">TukTuk</label>
+                </fieldset>
+                <fieldset class="extras">
+                    <legend>Extras</legend>
+                    <label><input type="checkbox" id="baby" value="van">Baby seat</label>
+                    <label><input type="checkbox" id="chair" value="van">Wheelchair</label>
+                    <label><input type="checkbox" id="tip" value="tuktuk">No Tip</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <input type="text" id="risultato"> <!-- STAMPO NEL VALUE DI id risultato-->
+            <button type="button" onclick="prendoDato(this.id)" id="valore" value="#">Submit booking</button>
+        </div>
+    </form>
+    <script>
+        function prendoDato(dato) {
+            document.getElementById('risultato').value += dato;
+        }
+    </script>
+</body>
+</html>
