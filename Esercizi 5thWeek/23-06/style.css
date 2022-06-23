@@ -1,0 +1,51 @@
+h1 {
+    font-size: 70px;
+    text-align: center;
+}
+#navbar {
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+}
+#navbar:hover {
+    background-color: blueviolet;
+}
+.zio {
+    background-color: gold;
+    width: 20vw;
+    height: 20vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-top: 0;
+}
+.zio > li:not(:first-child) {
+    margin-top: 20px;
+}
+.zio a {
+    font-size: 20px;
+    color: forestgreen;
+}
+button {
+    margin-right: 4px;
+}
+.size {
+    font-size: 140px;
+}
+.colors {
+    color: darkslateblue;
+}
+.uppers {
+    text-transform: lowercase;
+}
+.just li {
+    list-style-type: none;
+}
+.zio li > a {
+    text-decoration: none;
+}
+.pera {
+    height: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+}

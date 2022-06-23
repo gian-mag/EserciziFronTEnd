@@ -1,0 +1,47 @@
+body {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+/* Ciascuno dei cubi */
+.cubo {
+    width: 45vw;
+    height: 45vw;
+    position: relative;
+    border: 1px solid black;
+
+    /* rotazione cubi */
+    transform-style: preserve-3d; /* mantenere la tridimensionalità*/
+    transition: all 0.5s ease;
+    transform: rotateY(0deg);
+}
+
+.faccia {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+}
+
+.front{
+    background-image: url("https://picsum.photos/id/237/200/300");
+    transform: rotateY(0deg) translateZ(22.5vw);
+}
+
+.right{
+    background-image: url("https://picsum.photos/id/238/200/300");
+    transform: rotateY(90deg) translateZ(22.5vw);
+}
+
+.back{
+    background-image: url("https://picsum.photos/id/239/200/300");
+    transform: rotateY(180deg) translateZ(22.5vw);
+}
+
+.left{
+    background-image: url("https://picsum.photos/id/240/200/300");
+    transform: rotateY(-90deg) translateZ(22.5vw);
+}

@@ -1,0 +1,27 @@
+.cubo {
+    transform-style: preserve-3d;
+}
+/*rotazione cubo - non dovete usare per forza le classi*/
+.front {
+    transform: rotateY(0deg)
+}
+
+.right {
+    transform: rotateY(90deg)
+
+}
+
+.back {
+    transform: rotateY(180deg)
+}
+
+.left {
+    transform: rotateY(270deg)
+}
+/*rotazione e posizionamento foto*/
+.fotoDestra {
+    transform: rotateY(90deg) translateZ(-100px) /*100px è la metà della larghezza*/
+} 
+.fotoSinistra{}
+.fotoDavanti{}
+.fotoDietro{}

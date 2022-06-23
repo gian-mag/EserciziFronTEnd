@@ -1,0 +1,65 @@
+/* Contenitore generale */
+body {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+
+
+/* Ciascuno dei cubi */
+.cubo {
+    border: solid 1px black;
+    /* definiamo lo spazio che occupa */
+    width: 45vw;
+    height: 15vw;
+    position: relative;
+
+    /*rotazione cubo*/
+    transform-style: preserve-3d; /*per mantenere la tridimensionalità delle immagini rotate all'interno*/
+    transition: all 0.5s ease;
+    transform: rotateY(0deg);
+}
+
+.cubo:nth-of-type(2){
+    transition-delay: .3s;
+}
+.cubo:nth-of-type(3){
+    transition-delay: .6s;
+}
+
+/* definisce le caratteristiche di ogni faccia */
+.faccia {
+    transition: all .5s ease;
+
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute; /*posizionre le immagini nello stesso punto di partenza*/
+
+}
+
+.front {
+    background-image: url("https://picsum.photos/id/237/1200/1200");
+    transform: rotateY(0deg) translateZ(22.5vw);
+}
+.right {
+    background-image: url("https://picsum.photos/id/236/1200/1200");
+    transform: rotateY(90deg) translateZ(22.5vw);
+}
+.back {
+    background-image: url("https://picsum.photos/id/234/1200/1200");
+    transform: rotateY(180deg) translateZ(22.5vw);
+}
+.left {
+    background-image: url("https://picsum.photos/id/233/1200/1200");
+    transform: rotateY(-90deg) translateZ(22.5vw);
+}
+
+.cubo:nth-of-type(2) .faccia{
+    background-position-y: 30vw;
+}
+.cubo:nth-of-type(3) .faccia{
+    background-position-y: 15vw;
+}
