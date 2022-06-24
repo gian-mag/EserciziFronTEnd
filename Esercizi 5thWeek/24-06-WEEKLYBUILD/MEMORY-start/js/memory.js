@@ -137,7 +137,7 @@ function closeModal() {
 // questa funzione calcola il tempo e aggiorna il contenitore sotto
 function startTimer() {
 
-    var s = 0, m = 0, h = 0;
+    var s = 0, m = 0;
 
     interval = setInterval(function() {
         timer.innerHTML = 'Tempo: ' + m + " min " + s + " sec";
@@ -145,10 +145,6 @@ function startTimer() {
         if (s == 60) {
             m++;
             s = 0;
-        }
-        if (m == 60) {
-            h++;
-            m = 0;
         }
     }, 1000);
 }
