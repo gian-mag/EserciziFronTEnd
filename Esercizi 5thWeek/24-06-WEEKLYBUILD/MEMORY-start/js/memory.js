@@ -17,15 +17,15 @@ var timer = document.querySelector(".timer");
 //una funzione che serve a mescolare in modo random gli elementi dell'array che viene passato 
 // (l'array contiene le icone degli animali)
 function shuffle(a) {
-    var currentIndex = a.length;
-    var temporaryValue, randomIndex;
+    var currentIndex = a.length;        // lunghezza dell'array che richiami come paramentro
+    var temporaryValue, randomIndex;    // due variabili di confronto
 
-    while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-        temporaryValue = a[currentIndex];
-        a[currentIndex] = a[randomIndex];
-        a[randomIndex] = temporaryValue;
+    while (currentIndex !== 0) {        // fino a quando la lunghezza dell'array richiamato non è 0
+        randomIndex = Math.floor(Math.random() * currentIndex); //lunghezza dell'array di partenza
+        currentIndex -= 1;  //diminuisce l'indice dell'array di base di 1 (esclude l'ultimo elemento già preso)
+        temporaryValue = a[currentIndex];   // setta la variabile temporenea come l'array che ha 1 elemento in meno
+        a[currentIndex] = a[randomIndex];   // all'array con l'elemento in meno, viene assegnata lo stesso array che ha il math.floor come index
+        a[randomIndex] = temporaryValue;    // glielo riassegna all'array temporaneo
     }
     return a;
 }

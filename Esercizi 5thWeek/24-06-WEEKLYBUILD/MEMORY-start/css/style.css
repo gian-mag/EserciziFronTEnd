@@ -23,6 +23,8 @@
 .show {
     visibility: visible !important; /* !important per sovrascrivere qualsiasi priorità del css */
     opacity: 1 !important;
+    pointer-events: none;
+    cursor: wait;
     /* da fare col js */
 }
 
