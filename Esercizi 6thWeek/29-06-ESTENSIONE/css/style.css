@@ -1,0 +1,83 @@
+.showcase-content div .btn-primary {
+  align-self: flex-start;
+  background: #2a70f6;
+  padding: 20px 15px;
+  font-size: 15px;
+  line-height: 1.4;
+  border-radius: 5px;
+  margin-right: 8px;
+}
+.showcase-content div .btn-secondary {
+  background: #f08c34;
+  align-self: flex-start;
+  padding: 20px 15px;
+  font-size: 15px;
+  line-height: 1.4;
+  border-radius: 5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.showcase {
+  background: #5a26bd;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+}
+.container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container nav h1 {
+  margin: 0;
+}
+.container nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  list-style-type: none;
+}
+.container nav ul li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.showcase-content {
+  display: flex;
+  margin: auto;
+  padding: 30px 0;
+  align-items: center;
+}
+.showcase-content div h1 {
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: bolder;
+  margin: 0;
+}
+.showcase-content div p {
+  padding-right: 10px;
+  font-size: 15px;
+  line-height: 1.4;
+  padding-bottom: 10px;
+}
+.showcase-content img {
+  width: 350px;
+  height: 350px;
+}

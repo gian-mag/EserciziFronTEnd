@@ -1,0 +1,78 @@
+@import 'variables';
+@import 'buttoncino';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.showcase {
+    background: $bgclr;
+}
+
+a {
+    color: $clrUl;
+    text-decoration: none;
+}
+
+.container {
+    width: map-get($container, respw);
+    height: map-get($container, resph);
+    margin: 0 auto;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            margin: map-get($h1, mrg);
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $clrUl;
+            list-style-type: none;
+
+            li:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.showcase-content {
+    display: flex;
+    margin: auto;
+    padding: $shcasepadd 0;
+    align-items: center;
+
+    div {
+
+        h1 {
+            font-size: map-get($h1, fSize);
+            letter-spacing: map-get($h1, letspace);
+            font-weight: bolder;
+            margin: map-get($h1, mrg);
+        }
+
+        p {
+            padding-right: 10px;
+            font-size: map-get($p, fs);
+            line-height: map-get($p, lineh);
+            padding-bottom: map-get( $p, paddb);
+        }
+    }
+
+    img {
+        width: map-get($img, wdt);
+        height: map-get($img, hth);
+    }
+}

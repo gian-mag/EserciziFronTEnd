@@ -1,0 +1,22 @@
+.showcase-content {
+    div {
+        .btn-primary {
+            align-self: flex-start;
+            background: $btn1;
+            padding: map-get($btn, paddt) map-get($btn, paddl);
+            font-size: map-get($p, fs);
+            line-height: map-get($p, lineh);
+            border-radius: 5px;
+            margin-right: 8px;
+        }
+
+        .btn-secondary {
+            background: $btn2;
+            align-self: flex-start;
+            padding: map-get($btn, paddt) map-get($btn, paddl);
+            font-size: map-get($p, fs);
+            line-height: map-get($p, lineh);
+            border-radius: 5px;
+        }
+    }
+}
