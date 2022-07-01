@@ -75,10 +75,13 @@ h1 {
 }
 
 .numtwo {
-    .col {
+    .col-md {
         display: flex;
         align-items: center;
-        margin: 0 3rem;
+        padding: 0 3rem;
+        img {
+            min-width: 100%;
+        }
     }
 }
 

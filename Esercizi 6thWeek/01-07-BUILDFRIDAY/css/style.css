@@ -10083,10 +10083,13 @@ h1 {
   font-size: 3rem;
 }
 
-.numtwo .col {
+.numtwo .col-md {
   display: flex;
   align-items: center;
-  margin: 0 3rem;
+  padding: 0 3rem;
+}
+.numtwo .col-md img {
+  min-width: 100%;
 }
 
 /* CAROUSEL */
