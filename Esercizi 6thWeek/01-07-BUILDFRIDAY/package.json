@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bootstrap-scss": "^4.6.1",
+    "fontawesome-free": "^1.0.4"
+  }
+}
