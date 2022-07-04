@@ -1,0 +1,26 @@
+input {
+    width:50%;
+    display: block;
+    padding: .5rem;
+    margin: .5rem;
+}
+input:nth-child(3) {
+    width: 30%;
+}
+
+button {
+    padding: .5rem 1rem;
+    margin: .5rem;
+    background: #f5f5f5;
+    border: 1px solid black;
+}
+
+/*  Tabella */
+#utenti {
+    margin-top: 1rem;
+}
+#utenti th, #utenti td {
+    width: 200px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
