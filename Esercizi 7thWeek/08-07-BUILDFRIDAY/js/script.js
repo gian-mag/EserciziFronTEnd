@@ -62,7 +62,7 @@ async function getCard() {
 
         card.appendChild(cardBack);
 
-        card.classList.add("box");
+        card.classList.add("cardCube");
 
 
         card.addEventListener("click", activeLink)
