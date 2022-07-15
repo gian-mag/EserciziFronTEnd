@@ -5,7 +5,6 @@ let users = [];
 let container = document.querySelector('.container'); // mi prendo il div di class container
 console.log(container);
 
-Math.random()
 
 async function getCard() {
 
@@ -29,6 +28,15 @@ async function getCard() {
         let userIcon = document.createElement("div");
         userIcon.classList.add("icons");
 
+        let before = document.querySelector(":root");
+
+        function randomColor() {
+            return Math.floor(Math.random() * 16777215).toString(16);
+        };
+
+        before.style.setProperty("--bg-color", `linear-gradient(315deg, #${randomColor()}, #${randomColor()})`);
+
+        console.log(before.style.getPropertyValue("--bg-color"));
 
         console.log(e.name);
         userName.innerHTML = e.name;
@@ -54,16 +62,16 @@ async function getCard() {
 
         cardFront.classList.add("cardFront");
         cardBack.classList.add("cardBack");
-        cardBack.innerHTML= `Phone Number: ${e.phone} <br> <br> WebSite: ${e.website}`;
+        cardBack.innerHTML = `Phone Number: ${e.phone} <br> <br> WebSite: ${e.website}`;
         cardBack.classList.add("box");
         cardFront.classList.add("box");
+
 
         card.appendChild(cardFront);
 
         card.appendChild(cardBack);
 
         card.classList.add("cardCube");
-
 
         card.addEventListener("click", activeLink)
         function activeLink() {

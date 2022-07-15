@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabella API</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navigation">
+
+        <div class="data">
+            <h1>Progetto Fetch</h1>
+        </div>
+
+        <div class="toggle"></div>
+
+        <div class="search">
+            <input type=text class="bar">
+            <div class="icon">
+                <ion-icon name="search-circle-outline"></ion-icon>
+            </div>
+        </div>
+
+
+    </nav>
+
+    <div class="container">
+
+        <table id="tableAPI">
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Azione</th>
+                </tr>
+            </thead>
+            <tbody id="wrapper">
+
+                <!-- <tr>
+            <td>username json</td>
+            <td> email json</td>
+            <button>Aggiungi user</button>
+            <button>Dettagli user</button>
+            <button>Modifica user</button>
+            <button>Elimina user</button>
+        </tr> -->
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><a id="precedente" href="#">Precedente</a></td>
+                    <td></td>
+                    <td><a id="successivo" href="#">Successivo</a></td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <div id="dettagli">
+
+        </div>
+
+        <form method="get" id="modifica">
+
+            <input type="text" id="mod-name" name="name" required minlength="4" maxlength="12">
+
+            <input type="text" id="mod-username" name="username" required maxlenght="8">
+
+            <input type="text" id="mod-email" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" required="">
+
+            <input type="text" id="mod-street" name="street" required>
+
+            <input type="text" id="mod-city" name="city" required>
+
+            <input type="text" id="mod-zipcode" name="zipcode" required>
+
+            <button type="submit" id="modUser">Modifica Utente</button>
+
+        </form>
+
+        <form method="post" id="aggiungi">
+
+
+            <input type="text" id="name" name="name" placeholder="Nome" required minlength="4" maxlength="12">
+
+            <input type="text" id="username" name="username" placeholder="Username" required maxlength="8">
+
+            <input type="text" id="email" name="email" placeholder="Email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}"
+                required="">
+
+            <input type="text" id="street" name="street" placeholder="Street" required>
+
+            <input type="text" id="city" name="city" placeholder="City" required>
+
+            <input type="text" id="zipcode" name="zipcode" placeholder="Zipcode" required>
+
+            <button type="submit" id="addUser">Aggiungi Utente</button>
+
+        </form>
+
+
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <p>Sei sicuro dell'azione svolta?</p>
+
+                <button class="annulla">Annulla</button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <button id="adding">Aggiungi</button>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

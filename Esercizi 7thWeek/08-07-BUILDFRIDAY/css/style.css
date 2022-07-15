@@ -2,6 +2,10 @@ body {
     background: #111;
 }
 
+:root {
+    --bg-color: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+
 .container {
     position: relative;
     display: flex;
@@ -38,18 +42,18 @@ body {
     border-radius: 10px;
 }
 
-.box::before {
+/* .box::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    background: var(--bg-color);
     z-index: -1;
     pointer-events: none;
     border-radius: 10px;
-}
+} */
 
 .box::after {
     content: '';
@@ -58,7 +62,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    background: var(--bg-color);
     filter: blur(10px);
     z-index: -1;
     pointer-events: none;
@@ -67,12 +71,12 @@ body {
 
 .box:nth-child(even)::before,
 .box:nth-child(even)::after {
-    background: linear-gradient(315deg, #1303f4, #fffb05);
+    background: var(--bg-color);
 }
 
 .box:nth-child(odd)::before,
 .box:nth-child(odd)::after {
-    background: linear-gradient(315deg, #03fff7, #5ff10a);
+    background: var(--bg-color);
 }
 
 .name {
