@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.bilancio1, .bilancio2 {
+    font-size: 20px;
+}
+form {
+    margin-bottom: 20px;
+    width: 100%;
+}
+input {
+    display: block;
+    width: 100%;
+    height: 25px;
+    margin: 10px 0;
+}
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    height: 40px;
+    border-radius: 4px;
+    color: white;
+    text-shadow: 0 2px 2px black;
+    border: 1px solid black;
+}
+button:nth-child(odd) {
+    background: green;
+}
+button:nth-child(even) {
+    background: red;
+}
+.conto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.saldoFiglio {
+    margin-top: 10px;
+    width: 100%;
+}
