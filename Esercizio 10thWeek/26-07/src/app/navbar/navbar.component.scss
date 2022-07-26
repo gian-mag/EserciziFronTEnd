@@ -1,0 +1,37 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 7vh;
+  background-color: grey;
+  color: white;
+  padding: .5em 0;
+  img {
+    padding-left: 1em;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1em;
+    li {
+      margin-left: .5em;
+    }
+  }
+  a {
+    color: black;
+    text-decoration: none;
+    opacity: .5;
+    &:hover {
+      color:white;
+      opacity: 1;
+    }
+    &.active {
+    color: white;
+    opacity: 1;
+  }
+  }
+
+}

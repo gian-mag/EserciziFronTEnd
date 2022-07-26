@@ -1,0 +1,7 @@
+<div *ngFor="let post of posts; index as i">
+  <div class="card">
+    <h2>{{post.title}}</h2>
+    <p>{{post.body}}</p>
+    <button (click)="change(i)">elimina</button>
+  </div>
+</div>
