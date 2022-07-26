@@ -1,0 +1,29 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 7vh;
+  color: white;
+  background-color: darkblue;
+    img {
+      padding-left: 1em;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1em;
+      li {
+        margin-left: .5em;
+        list-style-type: none;
+        a {
+          text-decoration: none;
+          color: white;
+        }
+        a:hover {
+          color: orangered
+        }
+      }
+    }
+}
