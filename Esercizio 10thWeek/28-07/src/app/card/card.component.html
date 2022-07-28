@@ -1,0 +1,7 @@
+<div class="card" [ngClass]="{'news': News }">
+  <p>{{post.id}}</p>
+  <h2 appHighlights>{{post.title}}</h2>
+  <p>{{post.body | showless}}</p>
+  <button (click)="editPost(post.id)">{{post.active ? 'Disattiva' : 'Attiva'}}</button>
+  <button [routerLink]="['/dettagli', post.id]">Dettagli</button>
+</div>

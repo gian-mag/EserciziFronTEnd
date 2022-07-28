@@ -1,0 +1,27 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aqua;
+  width: 50%;
+  height: auto;
+  text-align: center;
+  margin:  .7em;
+  border: 1px dotted white;
+  border-radius: 10px;
+  h2 {
+    color: green;
+    font-size: 1em;
+    margin-bottom: .4em;
+  }
+  p {
+    color: black;
+    font-size: .7em;
+    margin-bottom: .4em;
+  }
+  button {
+    width: 30%;
+    margin: .3em auto;
+  }
+}
