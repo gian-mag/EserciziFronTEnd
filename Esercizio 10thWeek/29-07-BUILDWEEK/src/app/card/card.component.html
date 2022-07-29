@@ -1,0 +1,8 @@
+<div class="container">
+  <ul>
+    <li>
+      <p>{{card.title}}</p>
+      <button *ngIf= "!card.completed" class="ok" (click)="editCard(index)">check</button>
+    </li>
+  </ul>
+</div>

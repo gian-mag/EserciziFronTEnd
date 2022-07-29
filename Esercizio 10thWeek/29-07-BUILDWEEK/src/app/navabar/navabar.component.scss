@@ -1,0 +1,44 @@
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+nav {
+  width: 30vw;
+  min-height: 6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+  li {
+    margin: 0 .5em;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    a {
+      color: white;
+      text-decoration: none;
+      &:hover {
+        color:purple;
+      }
+      &.active {
+        color:purple;
+      }
+    }
+  }
+
+}

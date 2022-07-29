@@ -1,0 +1,29 @@
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  flex-direction: column;
+  max-width: 100%;
+  li {
+    margin: 0 .5em;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+  }
+}
+.input{
+  button {
+    margin-left: .5em;
+    width: auto;
+    padding: .3em .6em;
+    text-align: center;
+  }
+}
