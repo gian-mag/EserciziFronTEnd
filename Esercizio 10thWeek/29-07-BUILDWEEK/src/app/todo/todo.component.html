@@ -1,0 +1,9 @@
+
+<app-card *ngFor="let item of todoList; index as i" [card]="item" [index]="i" (editEvent)="editPost($event)"></app-card>
+
+<div class="container">
+  <div class="input">
+    <input type="text">
+    <button (click)="pushList()">+</button>
+  </div>
+</div>
