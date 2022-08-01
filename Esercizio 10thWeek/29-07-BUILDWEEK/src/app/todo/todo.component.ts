@@ -10,10 +10,11 @@ import { TodoService } from '../todo.service';
 export class TodoComponent implements OnInit {
 
   todoList: Todo[] = [];
-
+  i:number = 0;
   constructor(private todo: TodoService) { }
 
   ngOnInit(): void {
+    /* this.todo.todoGet().then((res) => { this.todoList = res.filter((e:any) => {return e.completed == false})}) */
     this.todoList = this.todo.todoGet().filter((e) => {return e.completed == false});
     console.log(this.todoList);
   }
@@ -22,10 +23,11 @@ export class TodoComponent implements OnInit {
 
     let input: HTMLInputElement = document.querySelector("input") as HTMLInputElement;
     let list = {
-        id: this.todo.todoGet().length,
+        id: this.i,
         title: input.value,
         completed: false
       };
+    this.i++;
     this.todo.todoAdd(list).then((res) => this.todoList = res.filter((el:Todo) => el.completed == false))
 
     console.log(this.todoList);

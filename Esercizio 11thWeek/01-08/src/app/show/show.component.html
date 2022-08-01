@@ -1,0 +1,1 @@
+<app-card *ngFor="let card of cardList, index as i" [card]="card" [indice]="i" (editEvent)="editPost($event,$event)"></app-card>

@@ -1,0 +1,12 @@
+button{
+  margin-left: 10px;
+  border-radius: 5px;
+  color: white;
+  padding: .5em 1em;
+  &:nth-child(odd) {
+    background-color: red;
+  }
+  &:nth-child(even) {
+    background-color: green;
+  }
+}

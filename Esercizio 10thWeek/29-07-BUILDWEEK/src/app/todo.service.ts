@@ -15,13 +15,22 @@ export class TodoService {
     /* let one = this
       let promise:Promise <any> = new Promise(function(succ,err){
       setTimeout(() => {
+        if (one.todo == []) {
+          one.todo.push({
+            id: 99,
+            title: "Ops ancora non ci sono elementi",
+            completed: false
+          })
+        }
         one.todo
-        succ(one.todo)
+          succ(one.todo)
+
       }, 2000);
 
     })
     return promise */
-    return this.todo;
+    return this.todo
+
   }
   //metodo per aggiungere l'array
   todoAdd(list: Todo) {
