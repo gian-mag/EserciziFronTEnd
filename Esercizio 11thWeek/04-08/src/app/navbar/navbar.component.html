@@ -2,5 +2,6 @@
   <li><a [routerLink]="['/']">HOME</a></li>
   <li><a [routerLink]="['/login']" *ngIf="!isLogged">LOGIN</a></li>
   <li><a [routerLink]="['/signup']" *ngIf="!isLogged">SIGNUP</a></li>
+  <li><a [routerLink]="['/favourites']" *ngIf="isLogged">FAVORITI</a></li>
   <li><a type="button" (click)="logout()" *ngIf="isLogged">logout</a></li>
 </ul>

@@ -24,23 +24,28 @@
       "email": "222@222.222",
       "password": "$2a$10$e4SYM6KBweUBVfExkg2TTOUKg/1gVJKzCYYvtc42HnJTWSMdrI0OG",
       "id": 5
+    },
+    {
+      "email": "asdsad@sad.it",
+      "password": "$2a$10$pxOmWu.jpPPjKNXHzkcCr.WvmxRDiWi/LxZPy7fHxwIEzjIjUt7Q6",
+      "id": 6
     }
   ],
   "todos": [
     {
       "id": 0,
       "title": "Todo1",
-      "active": true
+      "favourites": true
     },
     {
       "id": 1,
       "title": "Todo2",
-      "likes": false
+      "favourites": false
     },
     {
       "id": 2,
       "title": "Todo3",
-      "likes": true
+      "favourites": true
     }
   ]
 }

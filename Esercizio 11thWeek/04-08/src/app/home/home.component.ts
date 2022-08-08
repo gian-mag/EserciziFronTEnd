@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { PostService } from '../post.service';
+import { Post } from '../user';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  posts: Post[] = [];
+
+  sub!: Subscription;
+
+  constructor(private post$: PostService) { }
 
   ngOnInit(): void {
+    this.sub = this.post$.obs.subscribe((res)=>{
+      this.posts = res})
+  }
+
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
   }
 
 }

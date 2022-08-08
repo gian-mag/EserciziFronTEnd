@@ -46,4 +46,13 @@ export class AuthService {
     localStorage.removeItem("token");
     this.authSub.next(false);
   }
+
+  isLogged() : boolean {
+    let t = localStorage.getItem("token");
+    if(t) {
+      return true
+    } else {
+      return false
+    }
+  }
 }

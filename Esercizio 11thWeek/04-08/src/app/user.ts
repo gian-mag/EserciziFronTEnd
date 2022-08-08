@@ -18,3 +18,9 @@ export interface AuthResponse {
   accessToken:string,
   user: AuthUser
 }
+
+export interface Post {
+  id:number,
+  title:string,
+  favourites: number
+}
