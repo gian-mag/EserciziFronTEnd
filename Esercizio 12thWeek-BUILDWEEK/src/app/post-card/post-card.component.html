@@ -1,0 +1,138 @@
+<div>
+  <mat-card class="example-card text-center mt-5">
+    <mat-card-title (click)="shotPostId()">
+      <a [routerLink]="['/post/', p.id]">{{ p.title }}</a>
+    </mat-card-title>
+    <mat-card-subtitle>
+      Author: <a (click)="showAddMenu = !showAddMenu">{{ p.autorname }} </a>
+      <div class="p-2" *ngIf="showAddMenu">
+        <button mat-raised-button color="basic" (click)="addFriend()">
+          Follow
+        </button>
+        <button
+          [routerLink]="['/user/', p.autore]"
+          class="mx-1"
+          mat-raised-button
+          color="primary"
+        >
+          Profilo
+        </button>
+      </div>
+    </mat-card-subtitle>
+    <mat-card-content>
+      <p class="card-text">
+        {{ p.body }}
+      </p>
+    </mat-card-content>
+
+    <button
+      class="buttonToggle"
+      *ngIf="ownedPost"
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a mat-menu-item (click)="deletePressed = !deletePressed">DELETE</a>
+      <a mat-menu-item (click)="openForm()">{{
+        modifyFlag == true ? "ANNULLA" : "MODIFY"
+      }}</a>
+    </mat-menu>
+
+    <mat-card-actions *ngIf="p.autore == id"> </mat-card-actions>
+    <a
+      mat-icon-button
+      [color]="colorHeart"
+      *ngIf="isLogged"
+      (click)="like()"
+      class="mx-2"
+      ><mat-icon>favorite</mat-icon></a
+    >
+    <button
+      class="mx-3"
+      mat-raised-button
+      matBadge="{{ p.likes.length }}"
+      matBadgePosition="before"
+      mat-button
+      [matMenuTriggerFor]="likes"
+      (click)="showLikes = !showLikes"
+    >
+      LIKES
+    </button>
+    <mat-menu class="px-3" #likes="matMenu">
+      <p *ngFor="let like of p.likes">-{{ like.username }}</p>
+    </mat-menu>
+    <button
+      class="mx-2"
+      mat-button
+      mat-raised-button
+      matBadge="{{ p.comments.length }}"
+      matBadgePosition="before"
+      (click)="commentiFlag = !commentiFlag"
+      class="my-2"
+    >
+      COMMENTI
+    </button>
+    <div *ngIf="deletePressed" id="modal">
+      <h3>Sei sicuro?</h3>
+      <div>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="delete(); deletePressed = !deletePressed"
+        >
+          Sì
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="deletePressed = !deletePressed"
+        >
+          No
+        </button>
+      </div>
+    </div>
+    <div>
+      <form
+        *ngIf="modifyFlag"
+        [formGroup]="form"
+        (ngSubmit)="modify()"
+        class="mt-5 p-3"
+      >
+        <label class="text-center mt-4" for="titolo">Titolo Post</label><br />
+        <input
+          formControlName="title"
+          class="w-100"
+          type="text"
+          id="titolo"
+        /><br />
+        <label
+          class="text-center"
+          for="exampleFormControlTextarea1"
+          class="form-label"
+          >Modifica post</label
+        >
+
+        <textarea
+          formControlName="body"
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+        ></textarea>
+
+        <button
+          class="btn btn-primary w-100 mt-1"
+          type="submit"
+          (click)="modify()"
+        >
+          Modifica
+        </button>
+      </form>
+    </div>
+    <div class="card-footer">
+      <app-comment [post]="p" [commentiFlag]="commentiFlag"></app-comment>
+    </div>
+  </mat-card>
+</div>

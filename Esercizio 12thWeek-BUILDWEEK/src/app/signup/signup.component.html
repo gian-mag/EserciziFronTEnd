@@ -1,0 +1,75 @@
+<div class="container w-50 p-3 mt-5">
+  <form [formGroup]="form" (ngSubmit)="signup()">
+    <mat-form-field class="w-100" appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" required />
+      <mat-error>{{ getErrorMessage("nome") }}</mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="w-100" appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" required />
+      <mat-error>{{ getErrorMessage("username") }}</mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="w-100" appearance="fill">
+      <mat-label>Età</mat-label>
+      <input matInput type="number" formControlName="eta" required />
+      <mat-error>{{ getErrorMessage("eta") }}</mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="w-100" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required />
+      <mat-error>{{ getEmailError() }}</mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="w-100" appearance="fill">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        formControlName="password"
+        required
+      />
+      <button
+        mat-icon-button
+        type="button"
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-error>{{ getErrorMessage("password") }}</mat-error>
+    </mat-form-field>
+    <br />
+    <mat-form-field class="w-100" appearance="fill">
+      <mat-label>Conferma password</mat-label>
+      <input
+        matInput
+        [type]="hide ? 'password' : 'text'"
+        formControlName="conferma"
+        required
+        (focusout)="spanFlag = true"
+      />
+      <button
+        mat-icon-button
+        type="button"
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+      </button>
+      <mat-error>{{ getPassError() }}</mat-error>
+      <span class="spanError" *ngIf="spanFlag">{{ getSpanError() }}</span>
+    </mat-form-field>
+    <br />
+    <button mat-raised-button color="primary" class="w-100" type="submit">
+      Registrati
+    </button>
+  </form>
+</div>

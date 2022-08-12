@@ -1,0 +1,15 @@
+.myPost{
+  background-color: rgb(94, 94, 219);
+}
+#addPost {
+  width: 70%;
+  margin: auto;
+}
+.columnReverse {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.full {
+  min-height: 100vh;
+}
+
